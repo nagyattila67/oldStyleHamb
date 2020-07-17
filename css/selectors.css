@@ -1,0 +1,16 @@
+body{background-color:#d3d3d3}
+.balmenu{background-color:#bdbdbd; padding:10px; border:solid 1px #7e7e7e;
+    display:inline-block; /*?*/
+    position:fixed;top:20px;color:#ffff00;left:20px}
+.balmenu label{display:block;margin-bottom:8px}
+.balmenu input{margin-bottom:8px;width:100px}
+.balmenu button{display:block}
+.balmenu input:hover{box-shadow: 5px 5px 3px 1px #7e7e7e}
+.login{text-align:center;margin-top:5px;}
+.basket{position: fixed; top:14.3%; left:46%;background:#bdbdbd;border:solid 1px #7e7e7e;height:auto;width:250px;}
+#containOfBasket{height:200px; overflow:auto;}
+.content{position:relative;left:12%;}
+.head{margin-left:50px;font-family:baveuse;color:#ff0000}
+P{font-family:robotoThin}
+.hamb{margin-left:5%;}
+fieldset{background-color:#bdbdbd;width:30%;border:solid 1px #7e7e7e}

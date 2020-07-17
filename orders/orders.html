@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendelés</title>
+    <link rel="stylesheet" href="/css/selectors.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+<body>
+
+
+
+    <div class="balmenu">
+        <h1 class="login">Login</h1>
+        <label for="email">Email:</label>
+        <input name="email" ; id="email" ;type="email">
+        <label for="password">Password:</label>
+        <input name="password" ; id="password">
+        <button type="button">send</button>
+
+        <br>
+        <ul style="margin-left:0px;padding-left:18px">
+            <li>
+                <a href="/index.html">Főoldal</a>
+            </li>
+            <li>
+                <a href="/products/products.html" ;>Termékeink</a>
+            </li>
+            <li>
+                <a href="/about/about.html" ;>Rólunk</a>
+            </li>
+            <li>
+                <a href="/index.html#info" ;>Információ</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+
+        <h1 class="head">Rendelés</h1>
+        <form>
+            <fieldset>
+                <legend>Megrendelő adatai</legend>
+
+                <table>
+                    <tr>
+                        <td><label for="name">Név: </label></td>
+                        <td><input id="name" type="name" size="22" maxlength="50" placeholder="név"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email2">Email: </label></td>
+                        <td><input id="email2" type="email" placeholder="email" size="22" maxlength="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for=phone>Telefonszám</label></td>
+                        <td><input id="phone" type="tel" size="22" placeholder="telefonszám" maxlength="22"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Cím: </label></td>
+                        <td><input id="address" type="address" placeholder="cím" size="22" maxlength="100"></td>
+                    </tr>
+                </table>
+
+
+
+
+
+
+
+                <label style="vertical-align:top" for="comment">Megjegyzés:</label>
+                <textarea id="comment" cols="20" rows="4" maxlength="100" placeholder="Kedves naplóm!"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Fizetés módja</legend>
+                <input id="card" type="radio" name="payment" value="off" onclick="changeRadioValue(el=this)">
+                <label for="card">átutalás bankkártyával</label><br>
+                <input id="cash" type="radio" name="payment" value="off" onclick="changeRadioValue(el=this)">
+                <label for="cash">átvátelkor fizetek</label><br>
+                <button id="send-user-data" onclick="displayUserData(elem=this,ev=event)" type="send">rendben</button>
+                <button type="reset">mégse</button>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <legend>Hamburger</legend>
+                <div class="hamb">
+                    <p>alapburger: 800 ft</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td> <input type="checkbox" id="double-meat" name="double-meat" value="off"
+                                        onclick="changeRadioValue(el=this)">
+                                </td>
+                                <td><label for="double-meat">dupla hússal</label></td>
+                                <td>+ 500 ft</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="liver" name="liver" value="off"
+                                        onclick="changeRadioValue(el=this)"></td>
+                                <td><label for="liver">csirkemájjal</label></td>
+                                <td>+ 300 ft</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" id="cheese" name="cheese" value="off"
+                                        onclick="changeRadioValue(el=this)"></td>
+                                <td><label for="cheese">sajtos</label></td>
+                                <td>+ 300 ft</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" id="double-cheese" name="cheese" value="off"
+                                        onclick="changeRadioValue(el=this)"></td>
+                                <td><label for="double-cheese">dupla sajttal</label></td>
+                                <td>+ 500 ft</td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="bacon" name="bacon" value="off"
+                                        onclick="changeRadioValue(el=this)"></td>
+                                <td><label for="bacon">sült szalonnával</label></td>
+                                <td>+ 200 ft</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="salad" name="salad" value="off"
+                                        onclick="changeRadioValue(el=this)"></td>
+                                <td><label for="salad">trópusi salátakoktéllal</label></td>
+                                <td>+ 300 ft</td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="egg" name="egg" value="off"
+                                        onclick="changeRadioValue(el=this)"></td>
+                                <td><label for="egg">tükörtojás</label></td>
+                                <td>+ 300 ft</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="no-onion" name="no-onion" value="off"
+                                        onclick="changeRadioValue(el=this)"></td>
+                                <td><label for="onion">hagymát nem kérek</label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <label for="sauce">Szósz:</label>
+                    <select id="sauce">
+                        <option>mustár</option>
+                        <option>kecsöp</option>
+                        <option>majonéz</option>
+                        <option>nem kérek szószt</option>
+                    </select><br>
+                    <input type="number" id="item-hamb" min="1" max="10" value="1" name="item-hamb">
+                    <label for="item-hamb"> adagot kérek.</label><br>
+                    <button id="send-hamb" onclick="displayBasket(ev=event)" type="send">kiválaszt</button>
+                    <button type="reset">mégse</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <form>
+
+
+            <fieldset>
+                <legend>Hotdog</legend>
+                <div class="hotdog">
+                    <input type="radio" name="hotdog" id="mustard" value="mustard" checked>
+                    <label for=mustard>mustárral</label><br>
+                    <input type="radio" name="hotdog" id="catchup" value="mustard">
+                    <label for=cathcup>kecsöppel</label><br>
+                    <input type="radio" name="hotdog" id="majonnaise" value="majonnaise">
+                    <label for="majonnaise">majonézzel</label><br>
+                    <input type="number" id="item-hd" min="1" max="10" value="1" name="item-hd">
+                    <label for="item-hd"> adagot kérek.</label><br>
+                </div>
+                <button id="send-hd" onclick="hambPrice()" type="send">kiválaszt</button>
+                <button type="reset">mégse</button>
+            </fieldset>
+
+            <div class="basket">
+
+                <p>A megrendelő adatai:</p>
+                <span id=userData>nincs adat</span>
+                <p>A fizetés módja:</p>
+                <span id="methodOfPayment">nincs kiválasztva</span>
+                <p id="containOfBasket">
+                    <span>Az Ön kosara jelenleg:</span><br><br>
+
+                    <span>üres
+
+                    </span>
+                </p>
+                <p>Fizentendő összeg:</p>
+                <span id="price">0</span>
+                <span>Ft</span><br>
+
+
+                <button id="send-button" onclick="" type="send">elküld</button>
+                <button type="reset">mégse</button>
+
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="/js/orders.js"></script>
+
+</html>
